@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/contratoes",
+      "handler": "contrato.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/contratoes/count",
+      "handler": "contrato.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/contratoes/:id",
+      "handler": "contrato.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/contratoes",
+      "handler": "contrato.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/contratoes/:id",
+      "handler": "contrato.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/contratoes/:id",
+      "handler": "contrato.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "banners",
+  "info": {
+    "name": "Banner",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombreBanner": {
+      "type": "uid"
+    },
+    "user": {
+      "via": "banners",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "categoria": {
+      "via": "banners",
+      "model": "categoria"
+    },
+    "portfolio": {
+      "via": "banners",
+      "model": "portfolio"
+    }
+  }
+}

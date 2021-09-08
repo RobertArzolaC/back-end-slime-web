@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "recursos",
+  "info": {
+    "name": "Recurso",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "fechaPublicacion": {
+      "type": "datetime"
+    }
+  }
+}

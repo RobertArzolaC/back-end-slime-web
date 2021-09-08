@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "valoracions",
+  "info": {
+    "name": "valoraciones",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "puntaje": {
+      "type": "uid"
+    },
+    "users_permissions_user": {
+      "via": "valoraciones",
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

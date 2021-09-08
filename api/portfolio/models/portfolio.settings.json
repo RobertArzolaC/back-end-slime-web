@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "portfolios",
+  "info": {
+    "name": "portfolio",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "via": "portfolio",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "banners": {
+      "collection": "banner",
+      "via": "portfolio"
+    }
+  }
+}
