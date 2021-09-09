@@ -67,16 +67,16 @@
       "via": "user",
       "collection": "banner"
     },
-    "valoraciones": {
-      "model": "valoracion",
-      "via": "users_permissions_user"
-    },
     "contratos": {
-      "collection": "contrato",
-      "via": "user"
+      "via": "user",
+      "collection": "contrato"
     },
     "fechaNacimiento": {
       "type": "date"
+    },
+    "contribuidor": {
+      "via": "users_permissions_user",
+      "model": "contribuidor"
     }
   }
 }

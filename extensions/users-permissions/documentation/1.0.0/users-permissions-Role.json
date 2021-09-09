@@ -570,9 +570,6 @@
                     "type": "string"
                   }
                 },
-                "valoraciones": {
-                  "type": "string"
-                },
                 "contratos": {
                   "type": "array",
                   "items": {
@@ -580,6 +577,9 @@
                   }
                 },
                 "fechaNacimiento": {
+                  "type": "string"
+                },
+                "contribuidor": {
                   "type": "string"
                 },
                 "created_by": {

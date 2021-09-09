@@ -568,9 +568,6 @@
                   "type": "string"
                 }
               },
-              "valoraciones": {
-                "type": "string"
-              },
               "contratos": {
                 "type": "array",
                 "items": {
@@ -578,6 +575,9 @@
                 }
               },
               "fechaNacimiento": {
+                "type": "string"
+              },
+              "contribuidor": {
                 "type": "string"
               },
               "created_by": {
@@ -592,7 +592,8 @@
             "type": "array",
             "items": {
               "required": [
-                "id"
+                "id",
+                "nombreBanner"
               ],
               "properties": {
                 "id": {
@@ -610,6 +611,15 @@
                 "portfolio": {
                   "type": "string"
                 },
+                "contribuidor": {
+                  "type": "string"
+                },
+                "imagenBanner": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
                 "published_at": {
                   "type": "string"
                 },
@@ -619,6 +629,152 @@
                 "updated_by": {
                   "type": "string"
                 }
+              }
+            }
+          },
+          "Educacion": {
+            "type": "string"
+          },
+          "nombre": {
+            "type": "string"
+          },
+          "apellido": {
+            "type": "string"
+          },
+          "annosExperiencia": {
+            "type": "integer"
+          },
+          "fotoPerfil": {
+            "required": [
+              "id",
+              "name",
+              "hash",
+              "mime",
+              "size",
+              "url",
+              "provider"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "alternativeText": {
+                "type": "string"
+              },
+              "caption": {
+                "type": "string"
+              },
+              "width": {
+                "type": "integer"
+              },
+              "height": {
+                "type": "integer"
+              },
+              "formats": {
+                "type": "object"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "number"
+              },
+              "url": {
+                "type": "string"
+              },
+              "previewUrl": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "provider_metadata": {
+                "type": "object"
+              },
+              "related": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "fotoPortada": {
+            "required": [
+              "id",
+              "name",
+              "hash",
+              "mime",
+              "size",
+              "url",
+              "provider"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "alternativeText": {
+                "type": "string"
+              },
+              "caption": {
+                "type": "string"
+              },
+              "width": {
+                "type": "integer"
+              },
+              "height": {
+                "type": "integer"
+              },
+              "formats": {
+                "type": "object"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "number"
+              },
+              "url": {
+                "type": "string"
+              },
+              "previewUrl": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "provider_metadata": {
+                "type": "object"
+              },
+              "related": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           }
@@ -634,6 +790,18 @@
             "items": {
               "type": "string"
             }
+          },
+          "Educacion": {
+            "type": "string"
+          },
+          "nombre": {
+            "type": "string"
+          },
+          "apellido": {
+            "type": "string"
+          },
+          "annosExperiencia": {
+            "type": "integer"
           },
           "created_by": {
             "type": "string"

@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/banners": {
+    "/contribuidors": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Banner"
+                    "$ref": "#/components/schemas/Contribuidor"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Banner"
+          "Contribuidor"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Banner"
+                  "$ref": "#/components/schemas/Contribuidor"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Banner"
+          "Contribuidor"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewBanner"
+                "$ref": "#/components/schemas/NewContribuidor"
               }
             }
           }
         }
       }
     },
-    "/banners/count": {
+    "/contribuidors/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Banner"
+          "Contribuidor"
         ],
         "parameters": []
       }
     },
-    "/banners/{id}": {
+    "/contribuidors/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Banner"
+                  "$ref": "#/components/schemas/Contribuidor"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Banner"
+          "Contribuidor"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Banner"
+                  "$ref": "#/components/schemas/Contribuidor"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Banner"
+          "Contribuidor"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewBanner"
+                "$ref": "#/components/schemas/NewContribuidor"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Banner"
+          "Contribuidor"
         ],
         "parameters": [
           {
@@ -514,19 +514,15 @@
   },
   "components": {
     "schemas": {
-      "Banner": {
+      "Contribuidor": {
         "required": [
-          "id",
-          "nombreBanner"
+          "id"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "nombreBanner": {
-            "type": "uid"
-          },
-          "user": {
+          "users_permissions_user": {
             "required": [
               "id",
               "username",
@@ -592,164 +588,39 @@
               }
             }
           },
-          "categoria": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "nombreCategoria": {
-                "type": "uid"
-              },
-              "banners": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "recursos": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "portfolio": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "user": {
-                "type": "string"
-              },
-              "banners": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "Educacion": {
-                "type": "string"
-              },
-              "nombre": {
-                "type": "string"
-              },
-              "apellido": {
-                "type": "string"
-              },
-              "annosExperiencia": {
-                "type": "integer"
-              },
-              "fotoPerfil": {
-                "type": "string"
-              },
-              "fotoPortada": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "contribuidor": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "users_permissions_user": {
-                "type": "string"
-              },
-              "banners": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "imagenBanner": {
+          "banners": {
             "type": "array",
             "items": {
               "required": [
                 "id",
-                "name",
-                "hash",
-                "mime",
-                "size",
-                "url",
-                "provider"
+                "nombreBanner"
               ],
               "properties": {
                 "id": {
                   "type": "string"
                 },
-                "name": {
+                "nombreBanner": {
+                  "type": "uid"
+                },
+                "user": {
                   "type": "string"
                 },
-                "alternativeText": {
+                "categoria": {
                   "type": "string"
                 },
-                "caption": {
+                "portfolio": {
                   "type": "string"
                 },
-                "width": {
-                  "type": "integer"
-                },
-                "height": {
-                  "type": "integer"
-                },
-                "formats": {
-                  "type": "object"
-                },
-                "hash": {
+                "contribuidor": {
                   "type": "string"
                 },
-                "ext": {
-                  "type": "string"
+                "imagenBanner": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
-                "mime": {
-                  "type": "string"
-                },
-                "size": {
-                  "type": "number"
-                },
-                "url": {
-                  "type": "string"
-                },
-                "previewUrl": {
-                  "type": "string"
-                },
-                "provider": {
-                  "type": "string"
-                },
-                "provider_metadata": {
-                  "type": "object"
-                },
-                "related": {
+                "published_at": {
                   "type": "string"
                 },
                 "created_by": {
@@ -760,36 +631,19 @@
                 }
               }
             }
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
           }
         }
       },
-      "NewBanner": {
-        "required": [
-          "nombreBanner"
-        ],
+      "NewContribuidor": {
         "properties": {
-          "nombreBanner": {
-            "type": "uid"
-          },
-          "user": {
+          "users_permissions_user": {
             "type": "string"
           },
-          "categoria": {
-            "type": "string"
-          },
-          "portfolio": {
-            "type": "string"
-          },
-          "contribuidor": {
-            "type": "string"
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
+          "banners": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "created_by": {
             "type": "string"
@@ -803,7 +657,7 @@
   },
   "tags": [
     {
-      "name": "Banner"
+      "name": "Contribuidor"
     }
   ]
 }

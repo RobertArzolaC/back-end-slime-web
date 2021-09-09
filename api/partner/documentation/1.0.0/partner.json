@@ -516,21 +516,104 @@
     "schemas": {
       "Partner": {
         "required": [
-          "id"
+          "id",
+          "nombre",
+          "servicio"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "nose": {
+          "nombre": {
             "type": "uid"
+          },
+          "contratos": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "condicion": {
+                  "type": "string"
+                },
+                "partner": {
+                  "type": "string"
+                },
+                "user": {
+                  "type": "string"
+                },
+                "partners": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "servicio": {
+            "type": "string"
+          },
+          "valoracione": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "valoracion": {
+                "type": "boolean"
+              },
+              "partners": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "banner": {
+                "type": "string"
+              },
+              "portfolio": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           }
         }
       },
       "NewPartner": {
+        "required": [
+          "nombre",
+          "servicio"
+        ],
         "properties": {
-          "nose": {
+          "nombre": {
             "type": "uid"
+          },
+          "contratos": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "servicio": {
+            "type": "string"
+          },
+          "valoracione": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"

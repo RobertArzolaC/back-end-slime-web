@@ -527,71 +527,16 @@
           },
           "partner": {
             "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "nose": {
-                "type": "uid"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "users_permissions_user": {
-            "required": [
               "id",
-              "username",
-              "email"
+              "nombre",
+              "servicio"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "username": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "password": {
-                "type": "string"
-              },
-              "resetPasswordToken": {
-                "type": "string"
-              },
-              "confirmationToken": {
-                "type": "string"
-              },
-              "confirmed": {
-                "type": "boolean"
-              },
-              "blocked": {
-                "type": "boolean"
-              },
-              "role": {
-                "type": "string"
-              },
-              "portfolio": {
-                "type": "string"
-              },
-              "banners": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "valoraciones": {
-                "type": "string"
+              "nombre": {
+                "type": "uid"
               },
               "contratos": {
                 "type": "array",
@@ -599,7 +544,10 @@
                   "type": "string"
                 }
               },
-              "fechaNacimiento": {
+              "servicio": {
+                "type": "string"
+              },
+              "valoracione": {
                 "type": "string"
               },
               "created_by": {
@@ -656,9 +604,6 @@
                   "type": "string"
                 }
               },
-              "valoraciones": {
-                "type": "string"
-              },
               "contratos": {
                 "type": "array",
                 "items": {
@@ -666,6 +611,9 @@
                 }
               },
               "fechaNacimiento": {
+                "type": "string"
+              },
+              "contribuidor": {
                 "type": "string"
               },
               "created_by": {
@@ -676,9 +624,38 @@
               }
             }
           },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
+          "partners": {
+            "required": [
+              "id",
+              "nombre",
+              "servicio"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "nombre": {
+                "type": "uid"
+              },
+              "contratos": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "servicio": {
+                "type": "string"
+              },
+              "valoracione": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           }
         }
       },
@@ -690,15 +667,11 @@
           "partner": {
             "type": "string"
           },
-          "users_permissions_user": {
-            "type": "string"
-          },
           "user": {
             "type": "string"
           },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
+          "partners": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"

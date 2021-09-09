@@ -2,12 +2,13 @@
   "kind": "collectionType",
   "collectionName": "contratoes",
   "info": {
-    "name": "contrato"
+    "name": "contract",
+    "description": ""
   },
   "options": {
     "increments": true,
     "timestamps": true,
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
@@ -17,14 +18,14 @@
     "partner": {
       "model": "partner"
     },
-    "users_permissions_user": {
-      "plugin": "users-permissions",
-      "model": "user"
-    },
     "user": {
       "via": "contratos",
       "plugin": "users-permissions",
       "model": "user"
+    },
+    "partners": {
+      "via": "contratos",
+      "model": "partner"
     }
   }
 }

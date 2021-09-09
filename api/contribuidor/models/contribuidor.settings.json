@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "categorias",
+  "collectionName": "contribuidors",
   "info": {
-    "name": "category",
+    "name": "contributor",
     "description": ""
   },
   "options": {
@@ -12,16 +12,14 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "nombreCategoria": {
-      "type": "uid"
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "contribuidor"
     },
     "banners": {
-      "via": "categoria",
+      "via": "contribuidor",
       "collection": "banner"
-    },
-    "recursos": {
-      "via": "categoria",
-      "collection": "recurso"
     }
   }
 }

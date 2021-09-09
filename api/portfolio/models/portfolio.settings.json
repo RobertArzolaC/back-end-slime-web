@@ -18,8 +18,42 @@
       "model": "user"
     },
     "banners": {
-      "collection": "banner",
-      "via": "portfolio"
+      "via": "portfolio",
+      "collection": "banner"
+    },
+    "Educacion": {
+      "type": "string"
+    },
+    "nombre": {
+      "type": "string"
+    },
+    "apellido": {
+      "type": "string"
+    },
+    "annosExperiencia": {
+      "type": "integer"
+    },
+    "fotoPerfil": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "fotoPortada": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
     }
   }
 }

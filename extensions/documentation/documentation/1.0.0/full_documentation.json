@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "09/08/2021 3:22:12 AM"
+    "x-generation-date": "09/09/2021 3:04:58 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -1563,6 +1563,517 @@
         "summary": "",
         "tags": [
           "Contrato"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/contribuidors": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Contribuidor"
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Contribuidor"
+        ],
+        "parameters": [
+          {
+            "name": "_limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of results possible",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_sort",
+            "in": "query",
+            "required": false,
+            "description": "Sort according to a specific field.",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_start",
+            "in": "query",
+            "required": false,
+            "description": "Skip a specific number of entries (especially useful for pagination)",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "=",
+            "in": "query",
+            "required": false,
+            "description": "Get entries that matches exactly your input",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_ne",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are not equals to something",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lt",
+            "in": "query",
+            "required": false,
+            "description": "Get record that are lower than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are lower than or equal to a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gt",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than  or equal a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_contains",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_containss",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains (case sensitive) a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_in",
+            "in": "query",
+            "required": false,
+            "description": "Get records that matches any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_nin",
+            "in": "query",
+            "required": false,
+            "description": "Get records that doesn't match any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          }
+        ]
+      },
+      "post": {
+        "deprecated": false,
+        "description": "Create a new record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Contribuidor"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Contribuidor"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewContribuidor"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/contribuidors/count": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "count": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Contribuidor"
+        ],
+        "parameters": []
+      }
+    },
+    "/contribuidors/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Contribuidor"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Contribuidor"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Contribuidor"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Contribuidor"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewContribuidor"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "deprecated": false,
+        "description": "Delete a record",
+        "responses": {
+          "200": {
+            "description": "deletes a single record based on the ID supplied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Contribuidor"
         ],
         "parameters": [
           {
@@ -5853,7 +6364,8 @@
     "schemas": {
       "Banner": {
         "required": [
-          "id"
+          "id",
+          "nombreBanner"
         ],
         "properties": {
           "id": {
@@ -5908,9 +6420,6 @@
                   "type": "string"
                 }
               },
-              "valoraciones": {
-                "type": "string"
-              },
               "contratos": {
                 "type": "array",
                 "items": {
@@ -5918,6 +6427,9 @@
                 }
               },
               "fechaNacimiento": {
+                "type": "string"
+              },
+              "contribuidor": {
                 "type": "string"
               },
               "created_by": {
@@ -5940,6 +6452,12 @@
                 "type": "uid"
               },
               "banners": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "recursos": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -5970,11 +6488,124 @@
                   "type": "string"
                 }
               },
+              "Educacion": {
+                "type": "string"
+              },
+              "nombre": {
+                "type": "string"
+              },
+              "apellido": {
+                "type": "string"
+              },
+              "annosExperiencia": {
+                "type": "integer"
+              },
+              "fotoPerfil": {
+                "type": "string"
+              },
+              "fotoPortada": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },
               "updated_by": {
                 "type": "string"
+              }
+            }
+          },
+          "contribuidor": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "users_permissions_user": {
+                "type": "string"
+              },
+              "banners": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "imagenBanner": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name",
+                "hash",
+                "mime",
+                "size",
+                "url",
+                "provider"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "alternativeText": {
+                  "type": "string"
+                },
+                "caption": {
+                  "type": "string"
+                },
+                "width": {
+                  "type": "integer"
+                },
+                "height": {
+                  "type": "integer"
+                },
+                "formats": {
+                  "type": "object"
+                },
+                "hash": {
+                  "type": "string"
+                },
+                "ext": {
+                  "type": "string"
+                },
+                "mime": {
+                  "type": "string"
+                },
+                "size": {
+                  "type": "number"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "previewUrl": {
+                  "type": "string"
+                },
+                "provider": {
+                  "type": "string"
+                },
+                "provider_metadata": {
+                  "type": "object"
+                },
+                "related": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
               }
             }
           },
@@ -5985,6 +6616,9 @@
         }
       },
       "NewBanner": {
+        "required": [
+          "nombreBanner"
+        ],
         "properties": {
           "nombreBanner": {
             "type": "uid"
@@ -5996,6 +6630,9 @@
             "type": "string"
           },
           "portfolio": {
+            "type": "string"
+          },
+          "contribuidor": {
             "type": "string"
           },
           "published_at": {
@@ -6025,7 +6662,8 @@
             "type": "array",
             "items": {
               "required": [
-                "id"
+                "id",
+                "nombreBanner"
               ],
               "properties": {
                 "id": {
@@ -6042,6 +6680,46 @@
                 },
                 "portfolio": {
                   "type": "string"
+                },
+                "contribuidor": {
+                  "type": "string"
+                },
+                "imagenBanner": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "recursos": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "fechaPublicacion": {
+                  "type": "string"
+                },
+                "categoria": {
+                  "type": "string"
+                },
+                "nombreRecurso": {
+                  "type": "uid"
                 },
                 "published_at": {
                   "type": "string"
@@ -6068,6 +6746,12 @@
               "type": "string"
             }
           },
+          "recursos": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
           "created_by": {
             "type": "string"
           },
@@ -6089,71 +6773,16 @@
           },
           "partner": {
             "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "nose": {
-                "type": "uid"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "users_permissions_user": {
-            "required": [
               "id",
-              "username",
-              "email"
+              "nombre",
+              "servicio"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "username": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "password": {
-                "type": "string"
-              },
-              "resetPasswordToken": {
-                "type": "string"
-              },
-              "confirmationToken": {
-                "type": "string"
-              },
-              "confirmed": {
-                "type": "boolean"
-              },
-              "blocked": {
-                "type": "boolean"
-              },
-              "role": {
-                "type": "string"
-              },
-              "portfolio": {
-                "type": "string"
-              },
-              "banners": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "valoraciones": {
-                "type": "string"
+              "nombre": {
+                "type": "uid"
               },
               "contratos": {
                 "type": "array",
@@ -6161,7 +6790,10 @@
                   "type": "string"
                 }
               },
-              "fechaNacimiento": {
+              "servicio": {
+                "type": "string"
+              },
+              "valoracione": {
                 "type": "string"
               },
               "created_by": {
@@ -6218,9 +6850,6 @@
                   "type": "string"
                 }
               },
-              "valoraciones": {
-                "type": "string"
-              },
               "contratos": {
                 "type": "array",
                 "items": {
@@ -6228,6 +6857,9 @@
                 }
               },
               "fechaNacimiento": {
+                "type": "string"
+              },
+              "contribuidor": {
                 "type": "string"
               },
               "created_by": {
@@ -6238,9 +6870,38 @@
               }
             }
           },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
+          "partners": {
+            "required": [
+              "id",
+              "nombre",
+              "servicio"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "nombre": {
+                "type": "uid"
+              },
+              "contratos": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "servicio": {
+                "type": "string"
+              },
+              "valoracione": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           }
         }
       },
@@ -6252,15 +6913,150 @@
           "partner": {
             "type": "string"
           },
-          "users_permissions_user": {
-            "type": "string"
-          },
           "user": {
             "type": "string"
           },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
+          "partners": {
+            "type": "string"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
+            "type": "string"
+          }
+        }
+      },
+      "Contribuidor": {
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "users_permissions_user": {
+            "required": [
+              "id",
+              "username",
+              "email"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "username": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmationToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "type": "string"
+              },
+              "portfolio": {
+                "type": "string"
+              },
+              "banners": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "contratos": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "fechaNacimiento": {
+                "type": "string"
+              },
+              "contribuidor": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "banners": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "nombreBanner"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "nombreBanner": {
+                  "type": "uid"
+                },
+                "user": {
+                  "type": "string"
+                },
+                "categoria": {
+                  "type": "string"
+                },
+                "portfolio": {
+                  "type": "string"
+                },
+                "contribuidor": {
+                  "type": "string"
+                },
+                "imagenBanner": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "NewContribuidor": {
+        "properties": {
+          "users_permissions_user": {
+            "type": "string"
+          },
+          "banners": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "created_by": {
             "type": "string"
@@ -6272,21 +7068,104 @@
       },
       "Partner": {
         "required": [
-          "id"
+          "id",
+          "nombre",
+          "servicio"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "nose": {
+          "nombre": {
             "type": "uid"
+          },
+          "contratos": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "condicion": {
+                  "type": "string"
+                },
+                "partner": {
+                  "type": "string"
+                },
+                "user": {
+                  "type": "string"
+                },
+                "partners": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "servicio": {
+            "type": "string"
+          },
+          "valoracione": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "valoracion": {
+                "type": "boolean"
+              },
+              "partners": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "banner": {
+                "type": "string"
+              },
+              "portfolio": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           }
         }
       },
       "NewPartner": {
+        "required": [
+          "nombre",
+          "servicio"
+        ],
         "properties": {
-          "nose": {
+          "nombre": {
             "type": "uid"
+          },
+          "contratos": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "servicio": {
+            "type": "string"
+          },
+          "valoracione": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"
@@ -6350,9 +7229,6 @@
                   "type": "string"
                 }
               },
-              "valoraciones": {
-                "type": "string"
-              },
               "contratos": {
                 "type": "array",
                 "items": {
@@ -6360,6 +7236,9 @@
                 }
               },
               "fechaNacimiento": {
+                "type": "string"
+              },
+              "contribuidor": {
                 "type": "string"
               },
               "created_by": {
@@ -6374,7 +7253,8 @@
             "type": "array",
             "items": {
               "required": [
-                "id"
+                "id",
+                "nombreBanner"
               ],
               "properties": {
                 "id": {
@@ -6392,6 +7272,15 @@
                 "portfolio": {
                   "type": "string"
                 },
+                "contribuidor": {
+                  "type": "string"
+                },
+                "imagenBanner": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
                 "published_at": {
                   "type": "string"
                 },
@@ -6401,6 +7290,152 @@
                 "updated_by": {
                   "type": "string"
                 }
+              }
+            }
+          },
+          "Educacion": {
+            "type": "string"
+          },
+          "nombre": {
+            "type": "string"
+          },
+          "apellido": {
+            "type": "string"
+          },
+          "annosExperiencia": {
+            "type": "integer"
+          },
+          "fotoPerfil": {
+            "required": [
+              "id",
+              "name",
+              "hash",
+              "mime",
+              "size",
+              "url",
+              "provider"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "alternativeText": {
+                "type": "string"
+              },
+              "caption": {
+                "type": "string"
+              },
+              "width": {
+                "type": "integer"
+              },
+              "height": {
+                "type": "integer"
+              },
+              "formats": {
+                "type": "object"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "number"
+              },
+              "url": {
+                "type": "string"
+              },
+              "previewUrl": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "provider_metadata": {
+                "type": "object"
+              },
+              "related": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "fotoPortada": {
+            "required": [
+              "id",
+              "name",
+              "hash",
+              "mime",
+              "size",
+              "url",
+              "provider"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "alternativeText": {
+                "type": "string"
+              },
+              "caption": {
+                "type": "string"
+              },
+              "width": {
+                "type": "integer"
+              },
+              "height": {
+                "type": "integer"
+              },
+              "formats": {
+                "type": "object"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "number"
+              },
+              "url": {
+                "type": "string"
+              },
+              "previewUrl": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "provider_metadata": {
+                "type": "object"
+              },
+              "related": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           }
@@ -6416,6 +7451,18 @@
             "items": {
               "type": "string"
             }
+          },
+          "Educacion": {
+            "type": "string"
+          },
+          "nombre": {
+            "type": "string"
+          },
+          "apellido": {
+            "type": "string"
+          },
+          "annosExperiencia": {
+            "type": "integer"
           },
           "created_by": {
             "type": "string"
@@ -6433,12 +7480,43 @@
           "id": {
             "type": "string"
           },
-          "nombre": {
-            "type": "string"
-          },
           "fechaPublicacion": {
             "type": "string",
             "format": "date-time"
+          },
+          "categoria": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "nombreCategoria": {
+                "type": "uid"
+              },
+              "banners": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "recursos": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "nombreRecurso": {
+            "type": "uid"
           },
           "published_at": {
             "type": "string",
@@ -6448,12 +7526,15 @@
       },
       "NewRecurso": {
         "properties": {
-          "nombre": {
-            "type": "string"
-          },
           "fechaPublicacion": {
             "type": "string",
             "format": "date-time"
+          },
+          "categoria": {
+            "type": "string"
+          },
+          "nombreRecurso": {
+            "type": "uid"
           },
           "published_at": {
             "type": "string",
@@ -6475,47 +7556,95 @@
           "id": {
             "type": "string"
           },
-          "puntaje": {
-            "type": "uid"
+          "valoracion": {
+            "type": "boolean"
           },
-          "users_permissions_user": {
+          "partners": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "nombre",
+                "servicio"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "nombre": {
+                  "type": "uid"
+                },
+                "contratos": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "servicio": {
+                  "type": "string"
+                },
+                "valoracione": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "banner": {
             "required": [
               "id",
-              "username",
-              "email"
+              "nombreBanner"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "username": {
+              "nombreBanner": {
+                "type": "uid"
+              },
+              "user": {
                 "type": "string"
               },
-              "email": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "password": {
-                "type": "string"
-              },
-              "resetPasswordToken": {
-                "type": "string"
-              },
-              "confirmationToken": {
-                "type": "string"
-              },
-              "confirmed": {
-                "type": "boolean"
-              },
-              "blocked": {
-                "type": "boolean"
-              },
-              "role": {
+              "categoria": {
                 "type": "string"
               },
               "portfolio": {
+                "type": "string"
+              },
+              "contribuidor": {
+                "type": "string"
+              },
+              "imagenBanner": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "portfolio": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "user": {
                 "type": "string"
               },
               "banners": {
@@ -6524,16 +7653,22 @@
                   "type": "string"
                 }
               },
-              "valoraciones": {
+              "Educacion": {
                 "type": "string"
               },
-              "contratos": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+              "nombre": {
+                "type": "string"
               },
-              "fechaNacimiento": {
+              "apellido": {
+                "type": "string"
+              },
+              "annosExperiencia": {
+                "type": "integer"
+              },
+              "fotoPerfil": {
+                "type": "string"
+              },
+              "fotoPortada": {
                 "type": "string"
               },
               "created_by": {
@@ -6548,10 +7683,19 @@
       },
       "NewValoracion": {
         "properties": {
-          "puntaje": {
-            "type": "uid"
+          "valoracion": {
+            "type": "boolean"
           },
-          "users_permissions_user": {
+          "partners": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "banner": {
+            "type": "string"
+          },
+          "portfolio": {
             "type": "string"
           },
           "created_by": {
@@ -6670,9 +7814,6 @@
                     "type": "string"
                   }
                 },
-                "valoraciones": {
-                  "type": "string"
-                },
                 "contratos": {
                   "type": "array",
                   "items": {
@@ -6680,6 +7821,9 @@
                   }
                 },
                 "fechaNacimiento": {
+                  "type": "string"
+                },
+                "contribuidor": {
                   "type": "string"
                 },
                 "created_by": {
@@ -6812,6 +7956,24 @@
                   "type": "string"
                 }
               },
+              "Educacion": {
+                "type": "string"
+              },
+              "nombre": {
+                "type": "string"
+              },
+              "apellido": {
+                "type": "string"
+              },
+              "annosExperiencia": {
+                "type": "integer"
+              },
+              "fotoPerfil": {
+                "type": "string"
+              },
+              "fotoPortada": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -6824,7 +7986,8 @@
             "type": "array",
             "items": {
               "required": [
-                "id"
+                "id",
+                "nombreBanner"
               ],
               "properties": {
                 "id": {
@@ -6842,6 +8005,15 @@
                 "portfolio": {
                   "type": "string"
                 },
+                "contribuidor": {
+                  "type": "string"
+                },
+                "imagenBanner": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
                 "published_at": {
                   "type": "string"
                 },
@@ -6851,28 +8023,6 @@
                 "updated_by": {
                   "type": "string"
                 }
-              }
-            }
-          },
-          "valoraciones": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "puntaje": {
-                "type": "uid"
-              },
-              "users_permissions_user": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
               }
             }
           },
@@ -6892,13 +8042,10 @@
                 "partner": {
                   "type": "string"
                 },
-                "users_permissions_user": {
-                  "type": "string"
-                },
                 "user": {
                   "type": "string"
                 },
-                "published_at": {
+                "partners": {
                   "type": "string"
                 },
                 "created_by": {
@@ -6913,6 +8060,31 @@
           "fechaNacimiento": {
             "type": "string",
             "format": "date"
+          },
+          "contribuidor": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "users_permissions_user": {
+                "type": "string"
+              },
+              "banners": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           }
         }
       },
@@ -6964,9 +8136,6 @@
               "type": "string"
             }
           },
-          "valoraciones": {
-            "type": "string"
-          },
           "contratos": {
             "type": "array",
             "items": {
@@ -6976,6 +8145,9 @@
           "fechaNacimiento": {
             "type": "string",
             "format": "date"
+          },
+          "contribuidor": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"
@@ -7018,6 +8190,9 @@
     },
     {
       "name": "Contrato"
+    },
+    {
+      "name": "Contribuidor"
     },
     {
       "name": "Partner"

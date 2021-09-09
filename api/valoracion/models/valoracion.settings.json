@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "valoracions",
+  "collectionName": "valoracion",
   "info": {
-    "name": "valoraciones",
+    "name": "assessment",
     "description": ""
   },
   "options": {
@@ -12,13 +12,18 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "puntaje": {
-      "type": "uid"
+    "valoracion": {
+      "type": "boolean"
     },
-    "users_permissions_user": {
-      "via": "valoraciones",
-      "plugin": "users-permissions",
-      "model": "user"
+    "partners": {
+      "via": "valoracione",
+      "collection": "partner"
+    },
+    "banner": {
+      "model": "banner"
+    },
+    "portfolio": {
+      "model": "portfolio"
     }
   }
 }

@@ -529,7 +529,8 @@
             "type": "array",
             "items": {
               "required": [
-                "id"
+                "id",
+                "nombreBanner"
               ],
               "properties": {
                 "id": {
@@ -546,6 +547,46 @@
                 },
                 "portfolio": {
                   "type": "string"
+                },
+                "contribuidor": {
+                  "type": "string"
+                },
+                "imagenBanner": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "recursos": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "fechaPublicacion": {
+                  "type": "string"
+                },
+                "categoria": {
+                  "type": "string"
+                },
+                "nombreRecurso": {
+                  "type": "uid"
                 },
                 "published_at": {
                   "type": "string"
@@ -567,6 +608,12 @@
             "type": "uid"
           },
           "banners": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "recursos": {
             "type": "array",
             "items": {
               "type": "string"

@@ -522,12 +522,43 @@
           "id": {
             "type": "string"
           },
-          "nombre": {
-            "type": "string"
-          },
           "fechaPublicacion": {
             "type": "string",
             "format": "date-time"
+          },
+          "categoria": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "nombreCategoria": {
+                "type": "uid"
+              },
+              "banners": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "recursos": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "nombreRecurso": {
+            "type": "uid"
           },
           "published_at": {
             "type": "string",
@@ -537,12 +568,15 @@
       },
       "NewRecurso": {
         "properties": {
-          "nombre": {
-            "type": "string"
-          },
           "fechaPublicacion": {
             "type": "string",
             "format": "date-time"
+          },
+          "categoria": {
+            "type": "string"
+          },
+          "nombreRecurso": {
+            "type": "uid"
           },
           "published_at": {
             "type": "string",

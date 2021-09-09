@@ -1268,6 +1268,24 @@
                   "type": "string"
                 }
               },
+              "Educacion": {
+                "type": "string"
+              },
+              "nombre": {
+                "type": "string"
+              },
+              "apellido": {
+                "type": "string"
+              },
+              "annosExperiencia": {
+                "type": "integer"
+              },
+              "fotoPerfil": {
+                "type": "string"
+              },
+              "fotoPortada": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -1280,7 +1298,8 @@
             "type": "array",
             "items": {
               "required": [
-                "id"
+                "id",
+                "nombreBanner"
               ],
               "properties": {
                 "id": {
@@ -1298,6 +1317,15 @@
                 "portfolio": {
                   "type": "string"
                 },
+                "contribuidor": {
+                  "type": "string"
+                },
+                "imagenBanner": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
                 "published_at": {
                   "type": "string"
                 },
@@ -1307,28 +1335,6 @@
                 "updated_by": {
                   "type": "string"
                 }
-              }
-            }
-          },
-          "valoraciones": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "puntaje": {
-                "type": "uid"
-              },
-              "users_permissions_user": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
               }
             }
           },
@@ -1348,13 +1354,10 @@
                 "partner": {
                   "type": "string"
                 },
-                "users_permissions_user": {
-                  "type": "string"
-                },
                 "user": {
                   "type": "string"
                 },
-                "published_at": {
+                "partners": {
                   "type": "string"
                 },
                 "created_by": {
@@ -1369,6 +1372,31 @@
           "fechaNacimiento": {
             "type": "string",
             "format": "date"
+          },
+          "contribuidor": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "users_permissions_user": {
+                "type": "string"
+              },
+              "banners": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           }
         }
       },
@@ -1420,9 +1448,6 @@
               "type": "string"
             }
           },
-          "valoraciones": {
-            "type": "string"
-          },
           "contratos": {
             "type": "array",
             "items": {
@@ -1432,6 +1457,9 @@
           "fechaNacimiento": {
             "type": "string",
             "format": "date"
+          },
+          "contribuidor": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"

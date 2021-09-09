@@ -13,7 +13,8 @@
   "pluginOptions": {},
   "attributes": {
     "nombreBanner": {
-      "type": "uid"
+      "type": "uid",
+      "required": true
     },
     "user": {
       "via": "banners",
@@ -27,6 +28,20 @@
     "portfolio": {
       "via": "banners",
       "model": "portfolio"
+    },
+    "contribuidor": {
+      "via": "banners",
+      "model": "contribuidor"
+    },
+    "imagenBanner": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
     }
   }
 }

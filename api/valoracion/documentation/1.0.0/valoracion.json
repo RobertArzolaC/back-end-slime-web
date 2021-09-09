@@ -522,47 +522,95 @@
           "id": {
             "type": "string"
           },
-          "puntaje": {
-            "type": "uid"
+          "valoracion": {
+            "type": "boolean"
           },
-          "users_permissions_user": {
+          "partners": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "nombre",
+                "servicio"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "nombre": {
+                  "type": "uid"
+                },
+                "contratos": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "servicio": {
+                  "type": "string"
+                },
+                "valoracione": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "banner": {
             "required": [
               "id",
-              "username",
-              "email"
+              "nombreBanner"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "username": {
+              "nombreBanner": {
+                "type": "uid"
+              },
+              "user": {
                 "type": "string"
               },
-              "email": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "password": {
-                "type": "string"
-              },
-              "resetPasswordToken": {
-                "type": "string"
-              },
-              "confirmationToken": {
-                "type": "string"
-              },
-              "confirmed": {
-                "type": "boolean"
-              },
-              "blocked": {
-                "type": "boolean"
-              },
-              "role": {
+              "categoria": {
                 "type": "string"
               },
               "portfolio": {
+                "type": "string"
+              },
+              "contribuidor": {
+                "type": "string"
+              },
+              "imagenBanner": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "portfolio": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "user": {
                 "type": "string"
               },
               "banners": {
@@ -571,16 +619,22 @@
                   "type": "string"
                 }
               },
-              "valoraciones": {
+              "Educacion": {
                 "type": "string"
               },
-              "contratos": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+              "nombre": {
+                "type": "string"
               },
-              "fechaNacimiento": {
+              "apellido": {
+                "type": "string"
+              },
+              "annosExperiencia": {
+                "type": "integer"
+              },
+              "fotoPerfil": {
+                "type": "string"
+              },
+              "fotoPortada": {
                 "type": "string"
               },
               "created_by": {
@@ -595,10 +649,19 @@
       },
       "NewValoracion": {
         "properties": {
-          "puntaje": {
-            "type": "uid"
+          "valoracion": {
+            "type": "boolean"
           },
-          "users_permissions_user": {
+          "partners": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "banner": {
+            "type": "string"
+          },
+          "portfolio": {
             "type": "string"
           },
           "created_by": {
