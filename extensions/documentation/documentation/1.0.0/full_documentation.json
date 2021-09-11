@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "09/09/2021 3:04:58 AM"
+    "x-generation-date": "09/11/2021 3:05:41 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -1067,7 +1067,7 @@
         ]
       }
     },
-    "/contratoes": {
+    "/contratos": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -1321,7 +1321,7 @@
         }
       }
     },
-    "/contratoes/count": {
+    "/contratos/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -1378,7 +1378,7 @@
         "parameters": []
       }
     },
-    "/contratoes/{id}": {
+    "/contratos/{id}": {
       "get": {
         "deprecated": false,
         "description": "",

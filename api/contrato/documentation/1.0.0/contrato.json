@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/contratoes": {
+    "/contratos": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -254,7 +254,7 @@
         }
       }
     },
-    "/contratoes/count": {
+    "/contratos/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -311,7 +311,7 @@
         "parameters": []
       }
     },
-    "/contratoes/{id}": {
+    "/contratos/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
