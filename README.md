@@ -1,35 +1,36 @@
 ﻿# Slimes web
-- Api para una web para ayudar a profecionales de TI a encontrar empleo
+- Api for a web page that will help professionals in TI and graphic designers to find jobs
 
-> Aqui podran crear perfiles para mostrar su
-- Area
-- Empleador
-- Portafolio
-- Trabajos anteriores
-- Aportes
-- Valoración
+> Here you could find
+- Banners
+- Categories
+- Contracts
+- contributions
+- Briefcase
+- resources
+- assessment
 
 ## Setup
 
-**1 —** Clonar el repositorio
+**1 —** Clone the repository.
 ```bash
 git clone git@github.com:DanteDev2102/back-end-slime-web.git
 ```
 
-**2 —** Ve a `slime-web-main` e instala las dependencias.
+**2 —** Go to `slime-web-main` and install the dependencies.
 ```bash
 cd slime-web-main
 npm install
-# Esto tomará un rato
+# It take few minutes
 ```
 
-**3 —** inicia slime server.
+**3 —** start slime server.
 ```bash
 npm run develop
 ```
 
-**4 —** actualiza  los permisos.
+**4 —** Update permissions.
 
-Tienes que ir al panel de adimistrador y actualizar los permisos del `Public` role (general > Users & Permissions Plugin > rol > Public).
+You have to go in your admin panel and update permission of the `Public` role (general > Users & Permissions Plugin > rol > Public).
 
 
